@@ -1,0 +1,154 @@
+#Workspace {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    position: absolute; top: 0; left: 0; width: 100%;
+}
+#Statusbar {
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(darkgray));
+    border-top: 1px solid gray;
+}
+div, p, input[type="button"], input[type="submit"], button {
+    margin: 0; padding: 0;
+    font: 12pt sans-serif;
+}
+
+/* Toolbar */
+#Toolbar {
+    border-right: 3px double black;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    width: 134px;
+}
+/*#Toolbar input, #Toolbar button, */
+#Toolbar p, #Toolbar fieldset{
+    padding: 5px;
+    margin: 5px 3px 0 3px;
+}
+#Toolbar input[type="number"] {
+    width: 3em;
+}
+#Toolbar > p, #Toolbar > fieldset {
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+#ToolbarTop {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+#ToolbarTop > * {
+    display: block;
+    -webkit-box-flex: 1;
+}
+#ToolbarTop > div {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+}
+#ToolbarTop > div > label, #ToolbarTop > div > input {
+    display: block;
+    -webkit-box-flex: 1;
+}
+
+/* iPad */
+input#DrawSwitch {display: none;}
+@media only screen and (device-width: 768px) {
+    input[type="button"], input[type="submit"], button {
+        -webkit-appearance: none;
+        /*background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(darkgray));*/
+        border: 2px solid gray; border-radius: 5px;
+    }
+    input#DrawSwitch {
+        display: block;
+        background: url(res/one_finger_drawG_64.png) 0 0 no-repeat;
+        -webkit-appearance: none;
+        width: 64px; height: 64px;
+        /*border: 2px dotted lightgray; border-radius: 5px;*/
+        border: none;
+    }
+    input#DrawSwitch:checked {background: url(res/one_finger_drawBb_64.png) 0 0 no-repeat;}
+}
+
+/* Strategy selector and parameters */
+#StrategySel {
+    width: 100%;
+}
+
+.StrategyParams {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.StrategyParams > div {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+    margin-top: 5px;
+}
+.StrategyParams > label {
+    margin-top: 5px;
+}
+.StrategyParams > select {
+    width: 100%;
+}
+.StrategyParams > div > *, .StrategyParams > * {
+    display: block;
+}
+.StrategyParams > div > label {
+    -webkit-box-flex: 1;
+    margin-right: 5px;
+}
+.StrategyParams > div > input[type="button"] {
+    -webkit-box-flex: 1;
+}
+
+#Filler {
+    -webkit-box-flex: 1;
+    font-weight: bold;
+}
+input[type="submit"] {display: block; height: 30px;}
+
+/* Chart area */
+#CnvWrapper {
+    -webkit-box-flex: 1;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+#CnvWrapper::-webkit-scrollbar {
+    display: none;
+}
+#CnvWrapper:hover {cursor: crosshair;}
+
+
+/*#MainCnv {
+    z-index: 50;
+}*/
+
+#HelpCnv {
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    z-index: -5;
+}
+
+#PriceAxis {
+    position: absolute;
+    z-index: 25;
+    pointer-events: none;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: 100%;
+    margin-left: 3px;
+}
+#PriceAxis > div {
+    font-weight: bold;
+    -webkit-box-flex: 1;
+}
+#PriceAxis > div:last-child {
+    -webkit-box-flex: 0;
+}

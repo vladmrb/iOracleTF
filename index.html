@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest.php">
+    <head>
+        <title>iOracle for iOS5</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="apple-touch-icon" href="res/iOracle572.png">
+        <link rel="stylesheet" href="ui.css">
+        <script src="ui.js"></script>
+        <!--script src="chartsJsonCache.js"></script-->
+        <script src="draw.js"></script>
+        <script src="charts.js"></script>
+        <script src="process.js"></script>
+        <script src="trendFollowing.js"></script>
+    </head>
+    <body>
+        <div id="Workspace">
+            <div id="Toolbar">
+                <input type="checkbox" id="DrawSwitch" checked>
+                <br>
+                <fieldset id="Strategy">
+                    <legend>Strategy</legend>
+                    <div id="TrendFollowingParams" class="StrategyParams">
+                        <div>
+                            <label for="PriceRange">Price, %</label>
+                            <input type="number" id="PriceRange" value="10">
+                        </div>
+                        <div>
+                            <label for="EMA1">EMA 1</label>
+                            <input type="number" id="EMA1" value="12">
+                        </div>
+                        <div>
+                            <label for="EMA2">EMA 2</label>
+                            <input type="number" id="EMA2" value="16">
+                        </div>
+                        <div>
+                            <label for="EMArng">EMA +/-</label>
+                            <input type="number" id="EMArng" value="0">
+                        </div>
+                        <div>
+                            <input type="button" id="EMAMinus" value='-1'>
+                            <input type="button" id="EMAPlus"  value='+1'>
+                        </div>
+                        <div>
+                            <label for="Leverage">Leverage</label>
+                            <input type="number" id="Leverage" value="1">
+                        </div>
+                    </div>
+                </fieldset>
+                <div id="Filler"></div>
+                <input type="submit" value="Run" id="Run">
+            </div> <!-- Toolbar -->
+            <canvas id="HelpCnv"></canvas>
+            <div id="PriceAxis">
+                <div id="Price0">Price 0</div>
+                <div id="Price1">Price 1</div>
+                <div id="Price2">Price 2</div>
+                <div id="Price3">Price 3</div>
+                <div id="Price4">Price 4</div>
+            </div>
+            <div id="CnvWrapper">
+                <canvas id="MainCnv"></canvas>
+            </div>
+        </div> <!-- Workspace -->
+        <div id="Statusbar">
+            Status bar
+        </div>
+    </body>
+</html>
