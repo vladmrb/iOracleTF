@@ -1,6 +1,6 @@
 # iOracleTF
 
-PoC project demontrating PPO https://www.investopedia.com/terms/p/ppo.asp technical analysis indicator.
+PoC project demontrating PPO https://www.investopedia.com/terms/p/ppo.asp technical analysis indicator. The project is targeting iPad 1 and is runnable from Safari browser or installable as a "web app". Should still work on Chrome-like browsers. The code is fully client side, so can be run from a local web server.
 
 ## Usage
 
